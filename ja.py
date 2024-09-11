@@ -49,7 +49,7 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
 
     def send_output_to_http_server(self, data):
         # Send the output to the HTTP server running on localhost:5000
-        conn = http.client.HTTPConnection("89.110.119.157", 8081)
+        conn = http.client.HTTPConnection("127.0.0.1", 5000)
         headers = {
             'Content-Type': 'text/plain',
             'Content-Length': str(len(data))
